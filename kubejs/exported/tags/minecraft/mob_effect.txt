@@ -1,0 +1,6 @@
+To refresh this file, delete it and run /reload command again! Last updated: Apr 23, 2023, 5:03:14 PM
+
+#allurement:spread_of_ailments_cannot_inflict
+- minecraft:bad_omen (from allurement-1.19.2-3.1.0.jar)
+- minecraft:hero_of_the_village (from allurement-1.19.2-3.1.0.jar)
+- environmental:serenity? (from allurement-1.19.2-3.1.0.jar)

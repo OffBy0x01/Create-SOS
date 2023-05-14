@@ -1,0 +1,167 @@
+To refresh this file, delete it and run /reload command again! Last updated: Apr 23, 2023, 5:03:14 PM
+
+#forge:oxygen
+- #ad_astra:oxygen (from ad_astra-forge-1.19.2-1.12.6.jar)
+
+#forge:lubricant
+- pneumaticcraft:lubricant (from pneumaticcraft-repressurized-1.19.2-4.3.3-22.jar)
+
+#forge:crude_oil
+- pneumaticcraft:oil (from pneumaticcraft-repressurized-1.19.2-4.3.3-22.jar)
+- ad_astra:oil (from ad_astra-forge-1.19.2-1.12.6.jar)
+- ad_astra:flowing_oil (from ad_astra-forge-1.19.2-1.12.6.jar)
+
+#minecraft:water
+- minecraft:water (from Default)
+- minecraft:flowing_water (from Default)
+- create_central_kitchen:flowing_sap? (from create_central_kitchen-1.19.2-for-create-0.5.0.i-1.3.2.jar)
+- create_central_kitchen:sap? (from create_central_kitchen-1.19.2-for-create-0.5.0.i-1.3.2.jar)
+- create_central_kitchen:flowing_syrup? (from create_central_kitchen-1.19.2-for-create-0.5.0.i-1.3.2.jar)
+- create_central_kitchen:syrup? (from create_central_kitchen-1.19.2-for-create-0.5.0.i-1.3.2.jar)
+- create_central_kitchen:flowing_tomato_sauce? (from create_central_kitchen-1.19.2-for-create-0.5.0.i-1.3.2.jar)
+- create_central_kitchen:tomato_sauce? (from create_central_kitchen-1.19.2-for-create-0.5.0.i-1.3.2.jar)
+- createaddition:flowing_seed_oil (from createaddition-1.19.2-20230411a.jar)
+- createaddition:seed_oil (from createaddition-1.19.2-20230411a.jar)
+- ad_astra:fuel (from ad_astra-forge-1.19.2-1.12.6.jar)
+- ad_astra:flowing_fuel (from ad_astra-forge-1.19.2-1.12.6.jar)
+- ad_astra:oil (from ad_astra-forge-1.19.2-1.12.6.jar)
+- ad_astra:flowing_oil (from ad_astra-forge-1.19.2-1.12.6.jar)
+- ad_astra:cryo_fuel (from ad_astra-forge-1.19.2-1.12.6.jar)
+- ad_astra:flowing_cryo_fuel (from ad_astra-forge-1.19.2-1.12.6.jar)
+
+#forge:biodiesel
+- pneumaticcraft:biodiesel (from pneumaticcraft-repressurized-1.19.2-4.3.3-22.jar)
+
+#forge:milk
+- minecraft:milk? (from forge-1.19.2-43.2.8-universal.jar)
+- minecraft:flowing_milk? (from forge-1.19.2-43.2.8-universal.jar)
+
+#ad_astra:oxygen
+- ad_astra:oxygen (from ad_astra-forge-1.19.2-1.12.6.jar)
+
+#ad_astra_platform:oil
+- #c:oil? (from ad_astra-forge-1.19.2-1.12.6.jar)
+- #forge:oil? (from ad_astra-forge-1.19.2-1.12.6.jar)
+
+#forge:biofuel
+- createaddition:flowing_bioethanol (from createaddition-1.19.2-20230411a.jar)
+- createaddition:bioethanol (from createaddition-1.19.2-20230411a.jar)
+
+#pneumaticcraft:seismic_sensor_interesting
+- #forge:crude_oil (from pneumaticcraft-repressurized-1.19.2-4.3.3-22.jar)
+
+#forge:plantoil
+- pneumaticcraft:vegetable_oil (from pneumaticcraft-repressurized-1.19.2-4.3.3-22.jar)
+- createaddition:flowing_seed_oil (from createaddition-1.19.2-20230411a.jar)
+- createaddition:seed_oil (from createaddition-1.19.2-20230411a.jar)
+
+#minecraft:lava
+- minecraft:lava (from Default)
+- minecraft:flowing_lava (from Default)
+
+#create_enchantment_industry:printer_input
+- create_enchantment_industry:flowing_experience (from create_enchantment_industry-1.19.2-for-create-0.5.0.i-1.1.18.jar)
+- create_enchantment_industry:experience (from create_enchantment_industry-1.19.2-for-create-0.5.0.i-1.1.18.jar)
+- #forge:ink (from create_enchantment_industry-1.19.2-for-create-0.5.0.i-1.1.18.jar)
+
+#forge:ethanol
+- pneumaticcraft:ethanol (from pneumaticcraft-repressurized-1.19.2-4.3.3-22.jar)
+
+#create:bottomless/deny
+
+#ad_astra:fuel
+- ad_astra:fuel (from ad_astra-forge-1.19.2-1.12.6.jar)
+- ad_astra:flowing_fuel (from ad_astra-forge-1.19.2-1.12.6.jar)
+- #ad_astra:efficient_fuel (from ad_astra-forge-1.19.2-1.12.6.jar)
+- #ad_astra_platform:diesel? (from ad_astra-forge-1.19.2-1.12.6.jar)
+- #ad_astra_platform:biodiesel? (from ad_astra-forge-1.19.2-1.12.6.jar)
+
+#forge:chocolate
+- create:flowing_chocolate (from create-1.19.2-0.5.0.i.jar)
+- create:chocolate (from create-1.19.2-0.5.0.i.jar)
+
+#ad_astra:efficient_fuel
+- ad_astra:cryo_fuel (from ad_astra-forge-1.19.2-1.12.6.jar)
+- ad_astra:flowing_cryo_fuel (from ad_astra-forge-1.19.2-1.12.6.jar)
+
+#create:bottomless/allow
+- minecraft:water (from create-1.19.2-0.5.0.i.jar)
+- minecraft:lava (from create-1.19.2-0.5.0.i.jar)
+
+#forge:gasoline
+- pneumaticcraft:gasoline (from pneumaticcraft-repressurized-1.19.2-4.3.3-22.jar)
+
+#forge:experience
+- sophisticatedcore:xp_still (from sophisticatedcore-1.19.2-0.5.49.245.jar)
+- pneumaticcraft:memory_essence (from pneumaticcraft-repressurized-1.19.2-4.3.3-22.jar)
+
+#forge:tea
+- create:flowing_tea (from create-1.19.2-0.5.0.i.jar)
+- create:tea (from create-1.19.2-0.5.0.i.jar)
+
+#forge:diesel
+- pneumaticcraft:diesel (from pneumaticcraft-repressurized-1.19.2-4.3.3-22.jar)
+
+#forge:oil
+- #ad_astra:oil (from ad_astra-forge-1.19.2-1.12.6.jar)
+
+#ad_astra_platform:diesel
+- #c:diesel? (from ad_astra-forge-1.19.2-1.12.6.jar)
+- #forge:diesel? (from ad_astra-forge-1.19.2-1.12.6.jar)
+
+#pneumaticcraft:yeast_culture
+- pneumaticcraft:yeast_culture (from pneumaticcraft-repressurized-1.19.2-4.3.3-22.jar)
+
+#pneumaticcraft:plastic
+- pneumaticcraft:plastic (from pneumaticcraft-repressurized-1.19.2-4.3.3-22.jar)
+
+#pneumaticcraft:etching_acid
+- pneumaticcraft:etching_acid (from pneumaticcraft-repressurized-1.19.2-4.3.3-22.jar)
+
+#ad_astra_platform:fuel
+- #c:fuel? (from ad_astra-forge-1.19.2-1.12.6.jar)
+- #forge:fuel? (from ad_astra-forge-1.19.2-1.12.6.jar)
+
+#forge:kerosene
+- pneumaticcraft:kerosene (from pneumaticcraft-repressurized-1.19.2-4.3.3-22.jar)
+
+#create_enchantment_industry:blaze_enchanter_input
+- create_enchantment_industry:flowing_experience (from create_enchantment_industry-1.19.2-for-create-0.5.0.i-1.1.18.jar)
+- create_enchantment_industry:experience (from create_enchantment_industry-1.19.2-for-create-0.5.0.i-1.1.18.jar)
+- create_enchantment_industry:flowing_hyper_experience (from create_enchantment_industry-1.19.2-for-create-0.5.0.i-1.1.18.jar)
+- create_enchantment_industry:hyper_experience (from create_enchantment_industry-1.19.2-for-create-0.5.0.i-1.1.18.jar)
+
+#decorative_blocks:thatch
+- decorative_blocks:thatch (from Decorative Blocks-forge-1.19.2-3.0.0.jar)
+- decorative_blocks:flowing_thatch (from Decorative Blocks-forge-1.19.2-3.0.0.jar)
+
+#forge:honey
+- create:flowing_honey (from create-1.19.2-0.5.0.i.jar)
+- create:honey (from create-1.19.2-0.5.0.i.jar)
+
+#forge:creosote
+
+#ad_astra_platform:oxygen
+- #c:oxygen? (from ad_astra-forge-1.19.2-1.12.6.jar)
+- #forge:oxygen? (from ad_astra-forge-1.19.2-1.12.6.jar)
+
+#ad_astra:oil
+- ad_astra:oil (from ad_astra-forge-1.19.2-1.12.6.jar)
+- ad_astra:flowing_oil (from ad_astra-forge-1.19.2-1.12.6.jar)
+- techreborn:oil? (from ad_astra-forge-1.19.2-1.12.6.jar)
+- modern_industrialization:crude_oil? (from ad_astra-forge-1.19.2-1.12.6.jar)
+- #forge:crude_oil? (from ad_astra-forge-1.19.2-1.12.6.jar)
+
+#forge:lpg
+- pneumaticcraft:lpg (from pneumaticcraft-repressurized-1.19.2-4.3.3-22.jar)
+
+#ad_astra_platform:biodiesel
+- #c:biodiesel? (from ad_astra-forge-1.19.2-1.12.6.jar)
+- #forge:biodiesel? (from ad_astra-forge-1.19.2-1.12.6.jar)
+
+#forge:ink
+- create_enchantment_industry:flowing_ink (from create_enchantment_industry-1.19.2-for-create-0.5.0.i-1.1.18.jar)
+- create_enchantment_industry:ink (from create_enchantment_industry-1.19.2-for-create-0.5.0.i-1.1.18.jar)
+
+#forge:fuel
+- #ad_astra:fuel (from ad_astra-forge-1.19.2-1.12.6.jar)

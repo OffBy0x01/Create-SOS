@@ -29,6 +29,32 @@ const chargeRespawnObeliskWithSouls = (event) => {
   }
 }
 
+const fillDisenchantingWithSoulFluid = (event) => {
+  const TANK_CONTENT_MAX = 1000
+  const SOUL_TO_HYPER_EX = 2
+  const handItem = event.player.mainHandItem
+
+  if (handItem.id !== 'spirit:soul_crystal') return
+
+  if (undefined === handItem.nbt?.StoredEntity?.Souls) return
+
+  const disenchanterBlock = event.block.getEntityData()
+  const tankContent = disenchanterBlock.Tanks[0].TankContent
+  if (
+    tankContent.Amount < TANK_CONTENT_MAX && (
+      tankContent.FluidName === 'minecraft:empty' || 
+      tankContent.FluidName === CEI("hyper_experience")
+    )
+  ){
+    const extractAmount = Math.min((TANK_CONTENT_MAX - tankContent.Amount) / SOUL_TO_HYPER_EX, SOUL_TO_HYPER_EX * handItem.nbt.StoredEntity.Souls)
+    tankContent.Amount += SOUL_TO_HYPER_EX * extractAmount
+    tankContent.FluidName = CEI("hyper_experience")
+    event.block.setEntityData(disenchanterBlock)
+  }
+}
+
 BlockEvents.rightClicked(event => {
-  chargeRespawnObeliskWithSouls(event)
+  // fillDisenchantingWithSoulFluid(event)
+
+  // chargeRespawnObeliskWithSouls(event)
 })

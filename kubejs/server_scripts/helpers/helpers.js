@@ -13,23 +13,25 @@ function safeGet(propertyPath, object) {
   return nestedObject
 }
 
-function interactionHelper(event, entities, holdingItems, dropsWithChance, expiryMs){
+const getRandomNumBetween = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min
 
-  const compareStringOrRegex = (stringOrRegex, value) => {
-    if (typeof stringOrRegex === 'string') {
-      return value === stringOrRegex
-    } else if (stringOrRegex instanceof RegExp) {
-      return stringOrRegex.test(value)
-    }
-    return false
+const compareStringOrRegex = (stringOrRegex, value) => {
+  if (typeof stringOrRegex === 'string') {
+    return value === stringOrRegex
+  } else if (stringOrRegex instanceof RegExp) {
+    return stringOrRegex.test(value)
   }
-  
+  return false
+}
+
+// 
+const interactionHelper = (event, entities, holdingItems, dropsWithChance, opts) => {  
   if ( // expiry invalid
-    isNaN(expiryMs) || 
-    expiryMs < 0 ||
-    expiryMs > 60*60e3
+    isNaN(opts.expiryMs) || 
+    opts.expiryMs < 0 ||
+    opts.expiryMs > 24*60*60e3
   ) {
-    throw Error(`Invalid expiry '${expiryMs}' - must be 0 < number < 60*60e3`)
+    throw Error(`Invalid expiryMs '${opts.expiryMs}' - must be 0 < expiryMs < 24*60*60e3`)
   }
 
   if( // no matching entities or items
@@ -39,40 +41,32 @@ function interactionHelper(event, entities, holdingItems, dropsWithChance, expir
     return
   }
 
-  event.player.tell("matching items")
-
   if ( // already interacted and previous interaction NOT expired
     event.target.persistentData?.lastInteracted !== undefined &&
-    event.target.persistentData.lastInteracted < (Date.now() + expiryMs)
+    event.target.persistentData.lastInteracted < (Date.now() + opts.expiryMs)
     ) {
     return
   }
 
-  event.player.tell("interaction valid")
-
-  for (const [item, opts] of Object.entries(dropsWithChance)) {
-    event.player.tell(`${item}:${JSON.stringify(opts, null, 2)}`)
-    event.player.tell(Math.random() <= (opts?.chance ?? 1))
-    if (Math.random() <= (opts?.chance ?? 1)) {
-      const entityDrop = event.level.createEntity("item")
+  for (const [item, itemOpts] of Object.entries(dropsWithChance)) {
+    if (Math.random() <= (itemOpts?.chance ?? 1)) {
+      let entityDrop = event.level.createEntity("item")
       entityDrop.x = event.target.x
       entityDrop.y = event.target.y
       entityDrop.z = event.target.z
       entityDrop.item = item
-      entityDrop.item.count = opts.count
-      entityDrop.motionY = 0.32
-
-      event.player.tell("attempting to spawn item")
-
+      entityDrop.item.count = getRandomNumBetween(itemOpts.minCount ?? 0, itemOpts.maxCount ?? 1)
+      entityDrop.motionY = 0.3
+      entityDrop.motionX = 0.01
       entityDrop.spawn()
 
-      if (opts?.damageHeldItem) event.player.damageHeldItem()
-      if (opts?.allowOtherDrops) continue
-
-      event.target.persistentData.lastInteracted = (Date.now() + expiryMs)
-      return
+      if (itemOpts?.allowOtherDrops) continue
+      break
     }
-  }  
+  }
+  if (opts.damageHeldItem) event.player.damageHeldItem()  
+  event.target.persistentData.lastInteracted = (Date.now() + opts.expiryMs)
+  event.cancel()
 }
 
 const getPlayerPos = (player) => {
@@ -85,11 +79,15 @@ const getPlayerPos = (player) => {
 }
 
 ItemEvents.entityInteracted(event =>{
-  interactionHelper(event, [/minecraft:zombie/, /minecraft:chicken/], [/minecraft:shears/], {
-    'minecraft:rotten_flesh':{
-      count: 2,
+  console.log(event.target)
+  interactionHelper(event, [/minecraft:zombie/, "minecraft:chicken"], [/.*:shears/, "minecraft:stick"], {
+    'minecraft:feather':{
+      minCount: 1,
+      maxCount: 5,
       chance: 1,
-      damageHeldItem: true,
     }
-  }, 30e3)
+  }, {
+    expiryMs: 30e3, // 30s
+    damageHeldItem: true,
+  })
 })

@@ -69,4 +69,31 @@ const addSpiritRecipes = (event) => {
             }
         ]
     })
+
+    for (let i=1; i<501;i++) {
+        event.custom({
+            type: "create:emptying",
+            ingredients: [
+                {
+                    item: "spirit:soul_crystal",
+                    nbt: {
+                        StoredEntity: {
+                            Souls: i,
+                            Type: /.*/
+                        }
+                    }
+                }
+            ],
+            results: [
+                {
+                    item: "spirit:soul_crystal",
+                    nbt: {}
+                },
+                {
+                  "fluid": "create_enchantment_industry:hyper_experience",
+                  "amount": i*2
+                }
+              ]
+        })
+    }
 }

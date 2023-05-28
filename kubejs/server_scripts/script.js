@@ -2,6 +2,58 @@
 
 console.setDebugEnabled(true)
 
+// common materials
+const metals = {
+  copper: {
+    displayName: 'Copper',
+    colour: 0xa86624,
+    stillTexture: '',
+    flowingTexture: '',
+    ingotId: 'minecraft:copper_ingot',
+    blockId: 'minecraft:copper_block',
+  },
+  iron:{
+    displayName: 'Iron',
+    colour: 0xa86624,
+    stillTexture: '',
+    flowingTexture: '',
+    ingotId: 'minecraft:iron_ingot',
+    blockId: 'minecraft:iron_block',
+  },
+  zinc:{
+    displayName: 'Zinc',
+    colour: 0xa86624,
+    stillTexture: '',
+    flowingTexture: '',
+    ingotId: 'create:zinc_ingot',
+    blockId: 'create:zinc_block',
+  },
+  gold:{
+    displayName: 'Gold',
+    colour: 0xa86624,
+    stillTexture: '',
+    flowingTexture: '',
+    ingotId: 'minecraft:gold_ingot',
+    blockId: 'minecraft:gold_block',
+  },
+  brass:{
+    displayName: 'Brass',
+    colour: 0xa86624,
+    stillTexture: '',
+    flowingTexture: '',
+    ingotId: 'create:brass_ingot',
+    blockId: 'create:brass_block',
+  },
+  andesite_alloy:{
+    displayName: 'Andesite Alloy',
+    colour: 0xa86624,
+    stillTexture: '',
+    flowingTexture: '',
+    ingotId: 'create:andesite_alloy',
+    blockId: 'create:brass_block',
+  },
+}
+
 const depotApplicationRecipe = (event, output, inputInHand, inputOnDepot, isAssisted, inputInOffhand, offHandHasDurability) => {
 	// credit to "squoshi, JS dev's nightmare" on latvian.dev discord
 	if (event.block == 'create:depot' && event.block.entityData.HeldItem != undefined && event.player.mainHandItem.id == inputInHand) {
